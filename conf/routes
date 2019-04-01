@@ -5,5 +5,13 @@
 # Home page
 GET     /                           controllers.Application.index
 
+GET     /pathStudents              controllers.StudentController.listStudents()
+POST    /pathStudents/:id           controllers.StudentController.retrieve(id:Int)
+POST    /pathStudents              controllers.StudentController.create()
+PUT     /pathStudents              controllers.StudentController.update()
+DELETE  /pathStudents/:id           controllers.StudentController.delete(id:Int)
+
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file)
+
